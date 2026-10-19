@@ -152,7 +152,7 @@
     runtimecanvas = "resources/fnafw.cch";
     // Prevents touchscreen move
     window.addEventListener("scroll", preventMotion, false);
-    window.addEventListener("touchmove", preventMotion, false);
+    window.addEventListener("touchmove", preventMotion, { passive: false });
     function preventMotion(event) {
         window.scrollTo(0, 0);
         event.preventDefault();
